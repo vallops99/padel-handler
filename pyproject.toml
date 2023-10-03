@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "test-diligence"
+version = "0.1.0"
+description = ""
+authors = ["Valerio Farrotti <valerio.farrotti@adkaora.com>"]
+readme = "README.md"
+packages = [{include = "test_diligence"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
