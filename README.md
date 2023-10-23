@@ -1,0 +1,1 @@
+make sure to install postgres, macos `brew install postgresql@14`

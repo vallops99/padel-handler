@@ -8,8 +8,24 @@ packages = [{include = "padel_handler"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
+fastapi = "^0.103.2"
+uvicorn = "^0.23.2"
+sqlalchemy = {version = "^2.0.21", extras = ["postgresql"]}
+boto3 = "^1.28.58"
+passlib = {version = "^1.7.4", extras = ["bcrypt"]}
+alembic = "^1.12.0"
+python-jose = {extras = ["cryptography"], version = "^3.3.0"}
+aiosmtplib = "^2.0.2"
+fastapi-mail = "^1.4.1"
 
+[tool.poetry.group.dev.dependencies]
+python-dotenv = "^1.0.0"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+start_server = "poetry_scripts:start_server"
+apply_revision = "poetry_scripts:apply_revision"
+generate_auto_revision = "poetry_scripts:generate_auto_revision"
